@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div className="py-4 md:py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-        <div>
+        <div className="px-4 md:px-8">
           <h1 className="text-4xl md:text-6xl font-bold text-secondary mb-4">
             Private Limited Company Registration in Delhi NCR
           </h1>
@@ -106,7 +106,7 @@ export default function Hero() {
           </div>
           <p className="text-lg text-gray-500 mb-4">Have doubts? Ask Away!!!</p>
         </div>
-        <div className="flex justify-center -mt-24">
+        <div className="flex justify-center -mt-60">
           <ChatWidget />
         </div>
       </div>
