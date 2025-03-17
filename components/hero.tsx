@@ -1,115 +1,57 @@
+"use client";
+
+import { useState } from "react";
+import { Check, Send } from "lucide-react";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import ChatWidget from "./chat-widget";
 
-export default function Hero() {
+export default function Home() {
+  const [message, setMessage] = useState("");
+
   return (
-    <div className="py-4 md:py-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-        <div className="px-4 md:px-8">
-          <h1 className="text-4xl md:text-6xl font-bold text-secondary mb-4">
-            Private Limited Company Registration in Delhi NCR
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
-            Start Your Private Limited Company in Delhi NCR Today!
-          </h2>
-          <div className="space-y-3 mb-8">
-            <div className="flex items-center text-gray-600 cursor-pointer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 mr-2 text-green-500"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <p className="text-lg hover:text-customAmber transition-colors">
-                2 DIN and DSC for two Directors
-              </p>
+    <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col-reverse md:flex-row justify-between items-start gap-8">
+      {/* Left Section - Company Details */}
+      <div className="flex-1 w-full mt-8 md:mt-0">
+        <h1 className="text-[28px] md:text-[40px] font-bold text-[#2A5B92] leading-tight">
+          Private Limited Company Registration In Delhi NCR
+        </h1>
+        
+        <h2 className="text-xl md:text-2xl font-semibold text-[#FF9B29] mt-6 mb-8">
+          Start Your Private Limited Company In Delhi NCR Today!
+        </h2>
+
+        <div className="space-y-4">
+          {[
+            "2 DIN And DSC For Two Directors",
+            "Drafting Of MoA & AoA",
+            "Registration Fees & Stamp Duty",
+            "Company Incorporation Certificate",
+            "PAN And TAN"
+          ].map((item, index) => (
+            <div key={index} className="flex items-center gap-3">
+              <div className="w-6 h-6 rounded-full bg-[#1a4b8f] flex items-center justify-center">
+                <Check className="w-4 h-4 text-white" />
+              </div>
+              <span className="text-[#4B5563] text-base md:text-lg">{item}</span>
             </div>
-            <div className="flex items-center text-gray-600 cursor-pointer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 mr-2 text-green-500"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <p className="text-lg hover:text-customAmber transition-colors">
-                Drafting of MoA & AoA
-              </p>
-            </div>
-            <div className="flex items-center text-gray-600 cursor-pointer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 mr-2 text-green-500"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <p className="text-lg hover:text-customAmber transition-colors">
-                Registration fees & stamp duty
-              </p>
-            </div>
-            <div className="flex items-center text-gray-600 cursor-pointer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 mr-2 text-green-500"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <p className="text-lg hover:text-customAmber transition-colors">
-                Company Incorporation Certificate
-              </p>
-            </div>
-            <div className="flex items-center text-gray-600 cursor-pointer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 mr-2 text-green-500"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <p className="text-lg hover:text-customAmber transition-colors">
-                PAN and TAN
-              </p>
-            </div>
-          </div>
-          <div className="bg-primary/10 p-4 rounded-lg mb-8">
-            <p className="text-xl font-semibold text-primary">
-              Registration starts at ₹1,999 + Govt Fee
-            </p>
-            <p className="text-gray-600">No hidden charges!</p>
-          </div>
-          <p className="text-lg text-gray-500 mb-4">Have doubts? Ask Away!!!</p>
+          ))}
         </div>
-        <div className="flex justify-center -mt-60">
-          <ChatWidget />
+
+        <div className="mt-8 bg-[#fff9f2] border border-[#ffe4c4] rounded-lg p-6">
+          <div className="flex items-center gap-2">
+            <span className="text-[#ff8a00] text-lg md:text-xl">✨</span>
+            <h3 className="text-[#ff8a00] text-lg md:text-xl font-semibold">
+              Registration Starts At ₹1,999 + Govt Fee
+            </h3>
+          </div>
+          <p className="text-gray-600 text-base md:text-lg mt-2">No Hidden Charges!</p>
         </div>
+
+        <p className="text-gray-500 text-base md:text-lg mt-8">Have Doubts? Ask Away!!!</p>
       </div>
+
+      {/* Right Section - Chat Interface */}
+      <ChatWidget/>
     </div>
   );
 }

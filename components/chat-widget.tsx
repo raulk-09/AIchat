@@ -15,12 +15,12 @@ export default function ChatWidget() {
 
   return (
     <Card className="w-[400px] shadow-lg">
-      <CardHeader className="flex flex-row items-center justify-between bg-white border-b p-4">
+      <CardHeader className="flex flex-row items-center justify-between bg-white border-b p-3">
         <div className="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -35,17 +35,17 @@ export default function ChatWidget() {
             <h3 className="font-semibold text-secondary">
               AI Registration Assistant
             </h3>
-            <p className="text-sm text-gray-500">Online & ready to help</p>
+            <p className="text-xs text-gray-500">Online & ready to help</p>
           </div>
         </div>
       </CardHeader>
       <CardContent className="p-0">
-        <div className="h-[400px] overflow-y-auto p-4">
+        <div className="h-[300px] overflow-y-auto p-3">
           {messages.length === 0 ? (
-            <div className="bg-gray-100 p-4 rounded-lg">
+            <div className="bg-gray-100 p-3 rounded-lg">
               <div className="flex">
                 <span className="mr-2 text-yellow-500">👋</span>
-                <p>
+                <p className="text-sm">
                   Hello! I&apos;m your AI assistant for company registration.
                   I&apos;ll help you register your Private Limited company step
                   by step. Shall we get started?
@@ -56,12 +56,12 @@ export default function ChatWidget() {
             messages.map((message) => (
               <div
                 key={message.id}
-                className={`mb-4 ${
+                className={`mb-3 ${
                   message.role === "user" ? "text-right" : "text-left"
                 }`}
               >
                 <div
-                  className={`inline-block p-3 rounded-lg ${
+                  className={`inline-block p-2 rounded-lg text-sm ${
                     message.role === "user"
                       ? "bg-primary text-white"
                       : "bg-gray-100 text-gray-800"
@@ -74,15 +74,15 @@ export default function ChatWidget() {
           )}
         </div>
       </CardContent>
-      <CardFooter className="border-t p-3">
+      <CardFooter className="border-t p-2">
         <form onSubmit={handleSubmit} className="flex w-full space-x-2">
           <Input
             value={input}
             onChange={handleInputChange}
             placeholder="Type your message..."
-            className="flex-grow"
+            className="flex-grow text-sm"
           />
-          <Button type="submit">Send</Button>
+          <Button type="submit" size="sm">Send</Button>
         </form>
       </CardFooter>
     </Card>

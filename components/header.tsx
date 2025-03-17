@@ -1,72 +1,66 @@
-import Link from "next/link";
-import Image from "next/image";
-import headerLogo from "@/app/favicon.ico";
+'use client';
 
-export default function Header() {
+import Link from 'next/link';
+import Image from 'next/image';
+import { Phone } from 'lucide-react';
+import headerLogo from '@/app/favicon.ico';
+
+const Header = () => {
   return (
-    <header className="border-b border-gray-200 bg-white">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-secondary">
-          <div className="flex items-center">
-            <Image
-              src={headerLogo}
-              alt="Register Karo"
-              width={34}
-              height={34}
-            />
-
-            <span className="text-2xl font-bold text-secondary">
-              Register Karo
-            </span>
+    <header className="w-full bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo Section */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src={headerLogo}
+                alt="Register Karo"
+                width={42}
+                height={42}
+              />
+              <div className="text-[#1B3654] text-2xl font-bold">Register<span className="text-[#FF8A00]">Karo</span></div>
+            </Link>
           </div>
-        </Link>
-        <nav className="hidden md:flex space-x-6">
-          <Link
-            href="#"
-            className="text-secondary hover:text-primary font-medium"
-          >
-            Services
-          </Link>
-          <Link
-            href="#"
-            className="text-secondary hover:text-primary font-medium"
-          >
-            Pricing
-          </Link>
-          <Link
-            href="#"
-            className="text-secondary hover:text-primary font-medium"
-          >
-            About
-          </Link>
-          <Link
-            href="#"
-            className="text-secondary hover:text-primary font-medium"
-          >
-            Contact
-          </Link>
-        </nav>
-        <div className="flex items-center">
-          <button className="md:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-menu"
+
+          {/* Navigation Links */}
+          <nav className="hidden md:flex space-x-8">
+            <Link href="/" className="text-[#1B3654] hover:text-[#FF8A00] px-3 py-2 text-base font-medium transition-colors">
+              Home
+            </Link>
+            <div className="relative group">
+              <button className="text-[#1B3654] hover:text-[#FF8A00] px-3 py-2 text-base font-medium transition-colors inline-flex items-center">
+                Startup
+                <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+            <Link href="/blog" className="text-[#1B3654] hover:text-[#FF8A00] px-3 py-2 text-base font-medium transition-colors">
+              Blog
+            </Link>
+            <Link href="/contact-us" className="text-[#1B3654] hover:text-[#FF8A00] px-3 py-2 text-base font-medium transition-colors">
+              Contact Us
+            </Link>
+            <Link href="/about-us" className="text-[#1B3654] hover:text-[#FF8A00] px-3 py-2 text-base font-medium transition-colors">
+              About Us
+            </Link>
+          </nav>
+
+          {/* Phone Number Button */}
+          <div className="hidden md:flex items-center">
+            <a
+              href="tel:+918447746183"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-full text-white bg-[#FF8A00] hover:bg-[#e67c00] transition-colors"
             >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
-          </button>
+              <Phone className="h-5 w-5 mr-2" />
+              +918447746183
+            </a>
+          </div>
         </div>
       </div>
     </header>
   );
-}
+};
+
+export default Header;
