@@ -89,7 +89,7 @@ const Footer = () => {
           <div>
             <h4 className="text-[#FF8C1E] font-semibold mb-2">Elevate Your Business with RegisterKaro</h4>
             <p className="text-gray-300 leading-relaxed">
-              As a leading technology-driven legal services and advisory firm, we empower SMEs and entrepreneurs on their business journey. Our expert team covers business registration, legal compliance, tax filing, IPR registration, and more. With over 200 professionals, we've served 50,000+ satisfied customers, ensuring startup compliance with our country's legal and regulatory systems.
+              As a leading technology-driven legal services and advisory firm, we empower SMEs and entrepreneurs on their business journey. Our expert team covers business registration, legal compliance, tax filing, IPR registration, and more. With over 200 professionals, we&apos;ve served 50,000+ satisfied customers, ensuring startup compliance with our country&apos;s legal and regulatory systems.
             </p>
           </div>
 
@@ -110,7 +110,7 @@ const Footer = () => {
           <div>
             <h4 className="text-[#FF8C1E] font-semibold mb-2">Business Registration Expertise</h4>
             <p className="text-gray-300 leading-relaxed">
-              We are renowned for facilitating business registration, whether it's as a private limited company, one-person company, Section 8 company, LLP, public company, or Nidhi company. Our consultancy services extend from business setup from scratch to ongoing compliance.
+              We are renowned for facilitating business registration, whether it&apos;s as a private limited company, one-person company, Section 8 company, LLP, public company, or Nidhi company. Our consultancy services extend from business setup from scratch to ongoing compliance.
             </p>
           </div>
 

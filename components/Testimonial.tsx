@@ -149,7 +149,7 @@ export default function TestimonialSection() {
               className="flex transition-transform duration-300 ease-in-out gap-6"
               style={{ transform: `translateX(-${activeSlide * 416}px)` }}
             >
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
                   className="w-[400px] flex-shrink-0"

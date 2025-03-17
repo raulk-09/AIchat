@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import { Check, Send } from "lucide-react";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+// import { useState } from "react";
+import { Check } from "lucide-react";
+// import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import ChatWidget from "./chat-widget";
 
 export default function Home() {
-  const [message, setMessage] = useState("");
+  // const [message, setMessage] = useState("");
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col-reverse md:flex-row justify-between items-start gap-8">

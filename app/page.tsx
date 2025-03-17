@@ -1,5 +1,5 @@
 import Hero from "@/components/hero";
-import Features from "@/components/features";
+// import Features from "@/components/features";
 import TestimonialSection from "@/components/Testimonial";
 import ExpertAssistance from "@/components/ExpertAssistance";
 
